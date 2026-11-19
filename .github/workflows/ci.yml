@@ -23,7 +23,7 @@ jobs:
         run: ruff check . && ruff format --check .
       - name: Type check
         run: mypy
-      - name: Tests (no AI key: the Gemini layer is tested with a scripted fake, so CI costs nothing)
+      - name: "Tests (no AI key needed: the Gemini layer is tested with a scripted fake, so CI costs nothing)"
         run: pytest -v --cov --cov-report=term
       - name: Sample data is reproducible
         run: python scripts/make_sample_data.py && git diff --exit-code sample_data/
