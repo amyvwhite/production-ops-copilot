@@ -1,0 +1,51 @@
+{
+  "date": "2026-11-27",
+  "day_number": 5,
+  "crew_call": "12:00",
+  "shooting_call": "13:00",
+  "est_wrap": "23:00",
+  "weather": "Clear, -2C overnight",
+  "sunrise": "07:29",
+  "sunset": "16:42",
+  "location_ids": [
+    "L3"
+  ],
+  "nearest_hospital": "Eastgate Hospital, 1.8 km",
+  "scene_numbers": [
+    "13",
+    "14",
+    "15",
+    "16"
+  ],
+  "cast_calls": [
+    {
+      "cast_id": "4",
+      "pickup": "11:15",
+      "hmu": "11:45",
+      "on_set": "13:00"
+    },
+    {
+      "cast_id": "5",
+      "pickup": "12:30",
+      "hmu": "13:00",
+      "on_set": "14:00"
+    },
+    {
+      "cast_id": "7",
+      "pickup": "11:30",
+      "hmu": "12:00",
+      "on_set": "13:00"
+    }
+  ],
+  "crew_calls": [
+    {
+      "department": "Camera",
+      "call": "12:00"
+    },
+    {
+      "department": "Locations",
+      "call": "10:00"
+    }
+  ],
+  "notes": "Minor on set (cast 5): tutor and guardian required. Sc. 16 night exterior."
+}

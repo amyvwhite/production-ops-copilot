@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-26",
+  "day_number": 4,
+  "crew_call": "07:30",
+  "shooting_call": "08:30",
+  "est_wrap": "19:00",
+  "weather": "Overcast, 2C",
+  "sunrise": "07:28",
+  "sunset": "16:42",
+  "location_ids": [
+    "L2"
+  ],
+  "nearest_hospital": null,
+  "scene_numbers": [
+    "10",
+    "11",
+    "12"
+  ],
+  "cast_calls": [
+    {
+      "cast_id": "1",
+      "pickup": "06:45",
+      "hmu": "07:15",
+      "on_set": "08:30"
+    },
+    {
+      "cast_id": "2",
+      "pickup": "06:45",
+      "hmu": "07:15",
+      "on_set": "08:30"
+    },
+    {
+      "cast_id": "4",
+      "pickup": "09:00",
+      "hmu": "09:30",
+      "on_set": "10:30"
+    }
+  ],
+  "crew_calls": [
+    {
+      "department": "Camera",
+      "call": "07:30"
+    },
+    {
+      "department": "Transport",
+      "call": "06:30"
+    }
+  ],
+  "notes": "Crew shuttle from studio lot B every 15 minutes from 06:45. No parking at the warehouse."
+}

@@ -1,0 +1,6 @@
+id,name,address,parking,nearest_hospital,permit_required
+L1,Studio 3 - Precinct set,"55 Studio Way, Toronto (fictional)",Studio lot B,"St. Brigid General, 2.1 km",false
+L2,Cherry St. Warehouse,"Unit 4, 120 Harbour Rd, Toronto (fictional)",Shuttle from studio lot B,"Harbourview Hospital, 3.4 km",true
+L3,Kane House,"18 Maple Crescent, Toronto (fictional)","Church lot, 2 blocks north","Eastgate Hospital, 1.8 km",true
+L4,Harbourfront Pier,"Pier 7, Queens Quay (fictional)",Basecamp at Pier 6,"Harbourview Hospital, 1.2 km",true
+L5,Lakeview Diner,"2200 Lakeview Ave, Toronto (fictional)",Rear lot (8 spaces) + street,"St. Brigid General, 4.0 km",true

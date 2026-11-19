@@ -1,0 +1,31 @@
+{
+  "_about": "Golden questions for the sample production with 'today' = 2026-11-24. Each 'expect' entry is a group of acceptable phrasings (case-insensitive); every group must appear in the answer. 'cite_any': at least one of these source ids must be cited and verified. 'abstain': the right answer is that the data doesn't say.",
+  "cases": [
+    {"id": "warehouse-ready", "question": "Is the Cherry St. Warehouse ready for Thursday's shoot?",
+     "expect": [["agreement"], ["not signed", "unsigned", "still open", "is open", "not done", "pending", "outstanding"]],
+     "cite_any": ["checklist.csv#CL-01", "locations.csv#L2", "schedule.csv#day-4"]},
+    {"id": "turnaround-tomorrow", "question": "Does anyone have a turnaround problem tomorrow?",
+     "expect": [["Maya Okafor", "cast 1"], ["Daniel Brandt", "cast 2"]],
+     "cite_any": ["schedule.csv#day-2", "call_sheet_2026-11-24.pdf", "call_sheet_2026-11-25.pdf"]},
+    {"id": "on-set-time", "question": "What time is Priya Nair on set on Wednesday?",
+     "expect": [["09:30"]], "cite_any": ["call_sheet_2026-11-25.pdf"]},
+    {"id": "kane-house-scenes", "question": "Which scenes are we shooting at Kane House?",
+     "expect": [["13"], ["14"], ["15"], ["16"], ["24"], ["25"], ["26"]],
+     "cite_any": ["scenes.csv#sc-13", "scenes.csv#sc-24", "schedule.csv#day-5", "schedule.csv#day-8"]},
+    {"id": "no-owner", "question": "Which checklist items have no owner?",
+     "expect": [["crew list"], ["wrap party"]], "cite_any": ["checklist.csv#CL-05", "checklist.csv#CL-20"]},
+    {"id": "minor-permit", "question": "Is Lily Chen's work permit done?",
+     "expect": [["no", "not done", "not yet", "in progress", "in_progress", "waiting", "pending"], ["school letter"]],
+     "cite_any": ["checklist.csv#CL-06"]},
+    {"id": "day6-pages", "question": "How many pages are scheduled on Day 6?",
+     "expect": [["8 4/8", "8.5", "eight and a half", "68 eighths"]], "cite_any": ["schedule.csv#day-6"]},
+    {"id": "warehouse-hospital", "question": "What's the nearest hospital to the warehouse?",
+     "expect": [["Harbourview"]], "cite_any": ["locations.csv#L2"]},
+    {"id": "company-move-pier", "question": "Which day has a company move to the pier?",
+     "expect": [["Day 2", "Nov 24", "November 24"]], "cite_any": ["schedule.csv#day-2"]},
+    {"id": "abstain-catering", "question": "What's for lunch from catering on Day 3?", "abstain": true,
+     "expect": [["don't have", "do not have", "no information", "not available", "isn't in", "is not in", "not in the",
+                 "can't find", "cannot find", "couldn't find", "not listed", "no catering", "doesn't include",
+                 "does not include", "don't see", "no details"]]}
+  ]
+}

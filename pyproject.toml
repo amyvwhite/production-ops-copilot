@@ -1,0 +1,28 @@
+[project]
+name = "production-ops-copilot"
+version = "0.1.0"
+description = "AI production-office assistant for film/TV: schedules, call sheets and a production checklist, with a rules engine and grounded Gemini answers."
+requires-python = ">=3.11"
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM", "RUF"]
+ignore = ["RUF001"]
+
+[tool.mypy]
+python_version = "3.12"
+ignore_missing_imports = true
+files = ["app"]
+plugins = ["pydantic.mypy"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.coverage.run]
+source = ["app"]
+
+[tool.coverage.report]
+fail_under = 85

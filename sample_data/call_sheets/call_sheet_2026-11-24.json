@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-24",
+  "day_number": 2,
+  "crew_call": "11:00",
+  "shooting_call": "12:00",
+  "est_wrap": "23:30",
+  "weather": "Clear, -1C overnight",
+  "sunrise": "07:25",
+  "sunset": "16:44",
+  "location_ids": [
+    "L5",
+    "L4"
+  ],
+  "nearest_hospital": "Harbourview Hospital, 1.2 km (pier)",
+  "scene_numbers": [
+    "7",
+    "8"
+  ],
+  "cast_calls": [
+    {
+      "cast_id": "1",
+      "pickup": "10:15",
+      "hmu": "10:45",
+      "on_set": "12:00"
+    },
+    {
+      "cast_id": "4",
+      "pickup": "10:30",
+      "hmu": "11:00",
+      "on_set": "12:00"
+    },
+    {
+      "cast_id": "2",
+      "pickup": "16:30",
+      "hmu": "17:00",
+      "on_set": "18:30"
+    }
+  ],
+  "crew_calls": [
+    {
+      "department": "Camera",
+      "call": "11:00"
+    },
+    {
+      "department": "Grip/Electric",
+      "call": "10:30"
+    }
+  ],
+  "notes": "Company move to the pier at 17:30. Night exterior: dress warmly. Safety meeting at the pier."
+}

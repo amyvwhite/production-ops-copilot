@@ -1,0 +1,51 @@
+{
+  "date": "2026-11-25",
+  "day_number": 3,
+  "crew_call": "07:00",
+  "shooting_call": "08:00",
+  "est_wrap": "18:30",
+  "weather": "Light rain, 4C",
+  "sunrise": "07:27",
+  "sunset": "16:43",
+  "location_ids": [
+    "L1"
+  ],
+  "nearest_hospital": "St. Brigid General, 2.1 km",
+  "scene_numbers": [
+    "4",
+    "6",
+    "9",
+    "14"
+  ],
+  "cast_calls": [
+    {
+      "cast_id": "1",
+      "pickup": "05:45",
+      "hmu": "06:15",
+      "on_set": "07:00"
+    },
+    {
+      "cast_id": "2",
+      "pickup": "06:30",
+      "hmu": "07:00",
+      "on_set": "08:00"
+    },
+    {
+      "cast_id": "3",
+      "pickup": "07:30",
+      "hmu": "08:00",
+      "on_set": "09:30"
+    }
+  ],
+  "crew_calls": [
+    {
+      "department": "Camera",
+      "call": "07:00"
+    },
+    {
+      "department": "Hair/Makeup",
+      "call": "05:45"
+    }
+  ],
+  "notes": ""
+}

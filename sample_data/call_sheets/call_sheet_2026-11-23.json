@@ -1,0 +1,55 @@
+{
+  "date": "2026-11-23",
+  "day_number": 1,
+  "crew_call": "07:00",
+  "shooting_call": "08:00",
+  "est_wrap": "19:00",
+  "weather": "Cloudy, 3C",
+  "sunrise": "07:24",
+  "sunset": "16:45",
+  "location_ids": [
+    "L1"
+  ],
+  "nearest_hospital": "St. Brigid General, 2.1 km",
+  "scene_numbers": [
+    "1",
+    "2",
+    "3",
+    "5"
+  ],
+  "cast_calls": [
+    {
+      "cast_id": "1",
+      "pickup": "06:15",
+      "hmu": "06:45",
+      "on_set": "08:00"
+    },
+    {
+      "cast_id": "2",
+      "pickup": "06:30",
+      "hmu": "07:00",
+      "on_set": "08:00"
+    },
+    {
+      "cast_id": "6",
+      "pickup": "07:30",
+      "hmu": "08:00",
+      "on_set": "09:00"
+    }
+  ],
+  "crew_calls": [
+    {
+      "department": "Camera",
+      "call": "07:00"
+    },
+    {
+      "department": "Grip/Electric",
+      "call": "06:45"
+    },
+    {
+      "department": "Hair/Makeup",
+      "call": "06:30"
+    }
+  ],
+  "notes": "Welcome to day 1. Closed set for sc. 2."
+}

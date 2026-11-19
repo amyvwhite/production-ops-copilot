@@ -1,0 +1,21 @@
+id,phase,department,task,owner,due,status,depends_on,location_id,cast_id,notes
+CL-01,prep,Locations,Location agreement signed - Cherry St. Warehouse,Sam Ortiz (Locations),2026-11-20,open,,L2,,Owner's lawyer reviewing the indemnity clause.
+CL-02,prep,Locations,Location agreement signed - Kane House,Sam Ortiz (Locations),2026-11-18,done,,L3,,
+CL-03,prep,Locations,Film permit - Harbourfront Pier,Sam Ortiz (Locations),2026-11-19,done,,L4,,
+CL-04,prep,Locations,Location agreement signed - Lakeview Diner,Sam Ortiz (Locations),2026-11-19,done,,L5,,
+CL-05,prep,Production,Distribute crew list v2,,2026-11-20,open,,,,
+CL-06,prep,Production,Minor work permit - Lily Chen (cast 5),Jess Kim (Prod. Coordinator),2026-11-25,in_progress,,,5,Waiting on school letter.
+CL-07,prep,Stunts,Stunt budget approved,Ravi Patel (Line Producer),2026-11-24,open,,,,
+CL-08,prep,Stunts,Book stunt coordinator for pier chase,Alex Moreau (1st AD),2026-11-27,open,CL-07,L4,,Needed for Day 7 rehearsal on Nov 30.
+CL-09,prep,Safety,Safety meeting plan - night pier shoot,Alex Moreau (1st AD),2026-11-23,done,,L4,,
+CL-10,prep,Transport,Crew shuttle studio lot B to warehouse,Dee Grant (Transport),2026-11-25,in_progress,,L2,,
+CL-11,prep,Art,"Dress Kane House (kitchen, study, Ruby's room)",Noor Haddad (Art),2026-11-26,in_progress,,L3,,
+CL-12,prep,Wardrobe,Fittings - cast 4 and 7,Iris Lund (Wardrobe),2026-11-21,done,,,,
+CL-13,prep,Locations,Neighbour notification letters - Maple Crescent,Sam Ortiz (Locations),2026-11-25,open,,L3,,
+CL-14,prep,Production,Parking permits - Harbourfront basecamp,Jess Kim (Prod. Coordinator),2026-11-30,open,,L4,,
+CL-15,prep,Camera,Book drone and operator for pier chase,Theo Brooks (DP),2026-11-27,open,,L4,,
+CL-16,shoot,Accounting,Weekly cost report - week 1,Mei Tan (Accountant),2026-11-27,open,,,,
+CL-17,wrap,Locations,Location wrap walkthrough and photos,Sam Ortiz (Locations),2026-12-08,open,,,,
+CL-18,wrap,Art,Return rentals and props,Noor Haddad (Art),2026-12-09,open,,,,
+CL-19,wrap,Accounting,Final cost report for the block,Mei Tan (Accountant),2026-12-18,open,,,,
+CL-20,wrap,Production,Wrap party venue,,2026-12-04,open,,,,

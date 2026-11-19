@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Call sheet - Day {{ sheet.day_number }} - {{ prod.title }}</title>
+<style>
+  @page { size: letter; margin: 0.5in; }
+  body { font: 10.5pt/1.35 "Helvetica Neue", Arial, sans-serif; color: #111; margin: 0; }
+  .sheet { max-width: 7.5in; margin: 0 auto; padding: 16px; }
+  header { display: grid; grid-template-columns: 1fr auto 1fr; gap: 12px; align-items: start;
+           border-bottom: 2px solid #111; padding-bottom: 8px; }
+  h1 { font-size: 16pt; margin: 0; text-align: center; }
+  .big { font-size: 20pt; font-weight: 700; }
+  .muted { color: #555; }
+  .right { text-align: right; }
+  .draft { background: #fff3cd; border: 1px solid #c79100; padding: 6px 10px; margin: 10px 0; font-weight: 600; }
+  .flags { border: 2px solid #b00020; padding: 8px 12px; margin: 10px 0; }
+  .flags h2 { color: #b00020; }
+  .flags li { margin: 3px 0; }
+  .tbc { color: #b00020; font-weight: 700; }
+  h2 { font-size: 10.5pt; text-transform: uppercase; letter-spacing: .04em; margin: 14px 0 4px; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { border: 1px solid #999; padding: 4px 6px; text-align: left; vertical-align: top; }
+  th { background: #eee; font-size: 9pt; text-transform: uppercase; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  footer { margin-top: 14px; font-size: 8.5pt; color: #555; border-top: 1px solid #999; padding-top: 6px; }
+  @media print { .no-print { display: none; } }
+</style>
+</head>
+<body>
+<div class="sheet">
+  {% if show_tools %}<p class="no-print"><button onclick="window.print()">Print / save as PDF</button></p>{% endif %}
+  <header>
+    <div>
+      <div class="muted">{{ prod.company }}</div>
+      <div><strong>Crew call</strong></div>
+      <div class="big">{{ sheet.crew_call|t }}</div>
+      <div>Shooting call {{ sheet.shooting_call|t }}</div>
+    </div>
+    <div>
+      <h1>{{ prod.title }}</h1>
+      <div style="text-align:center">CALL SHEET<br><strong>{{ sheet.date.strftime('%A %B %d, %Y') }}</strong><br>
+        Day {{ sheet.day_number }} of {{ total_days }}</div>
+    </div>
+    <div class="right">
+      <div><strong>Est. wrap</strong> {{ sheet.est_wrap|t }}</div>
+      <div>Weather: {% if sheet.weather %}{{ sheet.weather }}{% else %}<span class="tbc">TBC</span>{% endif %}</div>
+      <div>Sunrise {% if sheet.sunrise %}{{ sheet.sunrise|t }}{% else %}<span class="tbc">TBC</span>{% endif %} / Sunset {% if sheet.sunset %}{{ sheet.sunset|t }}{% else %}<span class="tbc">TBC</span>{% endif %}</div>
+      <div>Nearest hospital:<br>{% if sheet.nearest_hospital %}{{ sheet.nearest_hospital }}{% else %}<span class="tbc">TBC - REQUIRED</span>{% endif %}</div>
+    </div>
+  </header>
+
+  {% if draft %}<div class="draft">DRAFT generated from the schedule: confirm call times, weather and sunset before issuing.</div>{% endif %}
+
+  {% if issues %}
+  <section class="flags">
+    <h2>Fix before this goes out</h2>
+    <ul>{% for i in issues %}<li><strong>{{ i.severity.value|upper }}</strong>: {{ i.title }}. {{ i.fix }}</li>{% endfor %}</ul>
+  </section>
+  {% endif %}
+
+  <h2>Locations</h2>
+  <table>
+    <tr><th>Location</th><th>Address</th><th>Parking / basecamp</th></tr>
+    {% for loc in locations %}<tr><td>{{ loc.name }} ({{ loc.id }})</td><td>{{ loc.address }}</td><td>{{ loc.parking or '' }}</td></tr>{% endfor %}
+  </table>
+
+  <h2>Scenes ({{ total_pages }} pages)</h2>
+  <table>
+    <tr><th>Sc.</th><th>Set / description</th><th>D/N</th><th>Pgs</th><th>Cast</th><th>Location</th></tr>
+    {% for s in scenes %}
+    <tr><td>{{ s.number }}</td><td><strong>{{ s.set }}</strong><br><span class="muted">{{ s.synopsis }}</span></td>
+      <td>{{ s.dn }}</td><td>{{ s.pages }}</td><td>{{ s.cast }}</td><td>{{ s.location }}</td></tr>
+    {% endfor %}
+  </table>
+
+  <h2>Cast</h2>
+  <table>
+    <tr><th>#</th><th>Cast</th><th>Character</th><th>Pickup</th><th>HMU</th><th>On set</th></tr>
+    {% for c in cast %}
+    <tr><td>{{ c.call.cast_id }}</td><td>{{ c.member.name if c.member else '?' }}</td>
+      <td>{{ c.member.role if c.member else '' }}{% if c.member and c.member.minor %} <strong>(MINOR)</strong>{% endif %}</td>
+      <td>{{ c.call.pickup|t }}</td><td>{{ c.call.hmu|t }}</td><td>{{ c.call.on_set|t }}</td></tr>
+    {% endfor %}
+  </table>
+
+  <div class="grid">
+    <div>
+      {% if sheet.crew_calls %}
+      <h2>Department calls</h2>
+      <table>{% for c in sheet.crew_calls %}<tr><td>{{ c.department }}</td><td>{{ c.call|t }}</td></tr>{% endfor %}</table>
+      {% endif %}
+    </div>
+    <div>
+      <h2>Notes</h2>
+      <p>{{ sheet.notes or day.notes or '-' }}</p>
+      {% if next_day %}<h2>Advance: Day {{ next_day.day_number }} ({{ next_day.date.strftime('%a %b %d') }})</h2>
+      <p>Crew call {{ next_day.crew_call|t }}. Scenes {{ next_day.scene_numbers|join(', ') }}.</p>{% endif %}
+    </div>
+  </div>
+
+  {% if show_tools %}<footer>Source: {{ sheet.source }}. Generated by Production Ops Copilot from the schedule, cast list and location file. No values are AI-generated.</footer>{% endif %}
+</div>
+</body>
+</html>
